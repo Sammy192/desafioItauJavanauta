@@ -3,6 +3,10 @@
 
 # Desafio Resolvido - Itaú Unibanco - Desafio de Programação
 
+Objetivo:
+Este projeto é uma API REST para gerenciar transações e calcular estatísticas das transações realizadas nos últimos 60 segundos.  
+A API foi desenvolvida com Java e Spring Boot.
+
 Desafio resolvido em aula da Javanauta aqui neste [Video](https://www.youtube.com/watch?v=9xrx1pxZEGU&t=127s).   
 Proposta completa do desafio pode ser encontrada [aqui](https://github.com/rafaellins-itau/desafio-itau-vaga-99-junior).   
 
@@ -12,10 +16,40 @@ Desevolvido neste:
 - Tratamento de erros com GlobalExceptionHandler
 - Observabilidade
 
+##  Como Configurar o Projeto
+
+1. Clone o Repositório
+
+2. Compile o Projeto
+
+```bash
+ mvn clean install
+```
+
+3. Execute o Projeto
+
+```bash
+mvn spring-boot:run
+```
+4. Como Rodar em um Container (Opcional)
+
+4.1. Crie a Imagem Docker
+Certifique-se de que o Docker está instalado e execute:
+
+```bash
+docker build -t api-transacoes 
+```
+
+4.2. Execute o Container
+
+```bash
+docker run -p 8080:8080 api-transacoes
+```
 
 ### 2.2. Endpoints da API
 
-A seguir os endpoints que estão presentes na API e a funcionalidade esperada de cada um deles.
+A seguir os endpoints que estão presentes na API e a funcionalidade esperada de cada um deles.  
+Disponível o Swagger após executar o projeto em 'http://localhost:8080/swagger-ui.html'
 
 #### 2.2.1. Receber Transações: `POST /transacao`
 
