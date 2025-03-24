@@ -14,8 +14,8 @@ public class EstatisticasService {
 
     public final TransacaoService transacaoService;
 
-    public EstatisticasResponseDTO calculaEstatisticasTransacoes(Integer tempoSegundos) {
-        List<TransacaoRequestDTO> transacoes = transacaoService.buscaTransacoesPorIntervalo(tempoSegundos);
+    public EstatisticasResponseDTO calculaEstatisticasTransacoes(Integer tempoInvervaloBusca) {
+        List<TransacaoRequestDTO> transacoes = transacaoService.buscaTransacoesPorIntervalo(tempoInvervaloBusca);
 
         DoubleSummaryStatistics estatisticas = transacoes.stream().mapToDouble(TransacaoRequestDTO::valor)
                 .summaryStatistics();
