@@ -19,6 +19,9 @@ public class EstatisticasService {
     public EstatisticasResponseDTO calculaEstatisticasTransacoes(Integer tempoInvervaloBusca) {
         log.info("Iniciado calculaEstatisticasTransacoes buscando invertavlo: {}", tempoInvervaloBusca);
         List<TransacaoRequestDTO> transacoes = transacaoService.buscaTransacoesPorIntervalo(tempoInvervaloBusca);
+        if (transacoes.isEmpty()) {
+            return new EstatisticasResponseDTO(0L, 0.0, 0.0, 0.0, 0.0);
+        }
 
         DoubleSummaryStatistics estatisticas = transacoes.stream().mapToDouble(TransacaoRequestDTO::valor)
                 .summaryStatistics();
