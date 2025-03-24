@@ -18,7 +18,7 @@ public class ControllerExceptionHandler {
 
     @ExceptionHandler(Exception.class)
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
-    public ResponseEntity<String> handleInternalErrorException(UnprocessableEntity e) {
+    public ResponseEntity<String> handleInternalErrorException(Exception e) {
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Erro: " + e.getMessage());
     }
 }
