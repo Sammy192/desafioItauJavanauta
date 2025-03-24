@@ -23,13 +23,13 @@ Desevolvido neste:
 2. Compile o Projeto
 
 ```bash
- mvn clean install
+ ./gradlew clean build
 ```
 
 3. Execute o Projeto
 
 ```bash
-mvn spring-boot:run
+./gradlew bootRun
 ```
 4. Como Rodar em um Container (Opcional)
 
