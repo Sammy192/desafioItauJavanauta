@@ -4,8 +4,13 @@
 # Desafio Resolvido - Itaú Unibanco - Desafio de Programação
 
 Desafio resolvido em aula da Javanauta aqui neste [Video](https://www.youtube.com/watch?v=9xrx1pxZEGU&t=127s).   
-Desenvolvimento dos testes [aqui](https://www.youtube.com/watch?v=jEUdgT-qpKo).
 Proposta completa do desafio pode ser encontrada [aqui](https://github.com/rafaellins-itau/desafio-itau-vaga-99-junior).   
+
+Desenvolvimento complementar [aqui](https://www.youtube.com/watch?v=jEUdgT-qpKo).   
+Desevolvido neste:
+- Testes
+- Tratamento de erros com GlobalExceptionHandler
+- Observabilidade
 
 
 ### 2.2. Endpoints da API
