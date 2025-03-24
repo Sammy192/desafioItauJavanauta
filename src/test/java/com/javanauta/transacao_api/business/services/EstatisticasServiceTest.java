@@ -17,7 +17,7 @@ import java.util.List;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
-public class EstatisticasServiceTest {
+class EstatisticasServiceTest {
 
     @Mock
     TransacaoService transacaoService;
@@ -28,7 +28,7 @@ public class EstatisticasServiceTest {
     private TransacaoRequestDTO transacaoRequestDTO;
 
     private EstatisticasResponseDTO estatisticasResponseDTO;
-    private final Integer TEMPO_INTERVALO_SEGUNDOS = 60;
+    private static final Integer TEMPO_INTERVALO_SEGUNDOS = 60;
 
     @BeforeEach
     void setUp() {
