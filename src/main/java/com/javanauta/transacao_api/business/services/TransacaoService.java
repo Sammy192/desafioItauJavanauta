@@ -32,9 +32,11 @@ public class TransacaoService {
 
     public void limpaTransacoes() {
         transacoes.clear();
+        log.info("Remocao de transacoes realizada");
     }
 
     public List<TransacaoRequestDTO> buscaTransacoesPorIntervalo(Integer tempoSegundos) {
+        log.info("Iniciado o processamento de busca de transações por intervalo");
         OffsetDateTime dataHoraIntervalo = OffsetDateTime.now().minusSeconds(tempoSegundos);
 
         return transacoes.stream()
