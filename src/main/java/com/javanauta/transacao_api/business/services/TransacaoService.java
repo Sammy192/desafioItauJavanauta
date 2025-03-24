@@ -29,4 +29,16 @@ public class TransacaoService {
         }
         transacoes.add(dto);
     }
+
+    public void limpaTransacoes() {
+        transacoes.clear();
+    }
+
+    public List<TransacaoRequestDTO> buscaTransacoesPorIntervalo(Integer tempoSegundos) {
+        OffsetDateTime dataHoraIntervalo = OffsetDateTime.now().minusSeconds(tempoSegundos);
+
+        return transacoes.stream()
+                .filter(transacao -> transacao.dataHora().isAfter(dataHoraIntervalo))
+                .toList();
+    }
 }
